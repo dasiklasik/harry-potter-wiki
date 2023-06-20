@@ -6,7 +6,7 @@ const instance = axios.create({
 
 export const API = {
   getAllCharacters: () => {
-    return instance.get("characters");
+    return instance.get<CharacterType[]>("characters");
   },
   getOneCharacter: (id: string) => {
     return instance.get(`character/${id}`);
@@ -23,4 +23,31 @@ export const API = {
   getSpells: () => {
     return instance.get("spells");
   },
+};
+
+export type CharacterType = {
+  id: string;
+  name: string;
+  alternate_names: string[];
+  species: string;
+  gender: string;
+  house: string;
+  dateOfBirth: string;
+  yearOfBirth: number;
+  wizard: boolean;
+  ancestry: string;
+  eyeColour: string;
+  hairColour: string;
+  wand: {
+    wood: string;
+    core: string;
+    length: number;
+  };
+  patronus: string;
+  hogwartsStudent: boolean;
+  hogwartsStaff: boolean;
+  actor: string;
+  alternate_actors: string[];
+  alive: boolean;
+  image: string;
 };
