@@ -1,4 +1,4 @@
-import { CharacterType } from "../../api/api";
+import { CharacterType } from "../../../api/api";
 import styles from "./CharacterCard.module.css";
 
 type CharacterCardPropsType = {
