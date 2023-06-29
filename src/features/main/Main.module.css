@@ -1,0 +1,26 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.pagination li {
+  list-style-type: none;
+}
+
+.pageItem {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px ;
+  height: 30px;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pageItem.active {
+  background: rgba(0, 0, 0, 0.08);
+}

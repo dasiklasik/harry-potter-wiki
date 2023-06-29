@@ -10,7 +10,7 @@ export const CharactersList = ({ data, ...props }: CharactersListPropsType) => {
   return (
     <div className={styles.wrapper}>
       {data.map((item) => (
-        <CharacterCard data={item} />
+        <CharacterCard key={item.id} data={item} />
       ))}
     </div>
   );
